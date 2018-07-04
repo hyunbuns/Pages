@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<title>register</title>
+<!-- fonts -->
+<link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Sonsie+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cantarell:700i|Cinzel+Decorative:900|Oswald:700" rel="stylesheet"><!-- css -->
+<link rel="stylesheet" href="cursor.css">
+<style>
+  body{
+    font-family: 'Sonsie One', cursive;
+    background-color: black;
+    color: white;
+  }
+  #reg{
+    text-shadow: 2px 2px 25px #ff4dc4;
+    font-weight:bold;
+    font-size: 150px;
+    opacity: 0.5;
+  }
+  #genderie, #firstName, #email, #id, #pass{
+    font-weight: bold;
+    font-size:25px;
+  }
+  label,input{
+    font-size: 13px;
+  }
+  .names{
+    position:absolute;
+    top: 50px;
+    left: 120px;
+  }
+  .genders{
+    position: absolute;
+    top: 300px;
+    left: 400px;
+  }
+  .emails{
+    position: absolute;
+    top: 500px;
+    left: 700px;
+  }
+  .ids {
+    position: absolute;
+    top: 50px;
+    right: 400px;
+  }
+  .passwords{
+    position:absolute;
+    top:350px;
+    right:100px;
+  }
+  .submitdiv{
+    position:absolute;
+    bottom:100px;
+    left: 150px;
+  }
+  pre{
+    color: #ffccee;
+  }
+  .button {
+  font-family:'Cantarell', cursive;
+  font-weight: bolder;
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #ffe6e6;
+  background-color: #ff4dc4;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #800055;
+}
+.button:hover {background-color: #ff4dc4;}
+
+.button:active {
+  background-color: #ff4dc4;
+  box-shadow: 0 5px #800055;
+  transform: translateY(4px);
+}
+
+</style>
+</head>
+<body>
+  <p style="color:white;" id="reg">Register!!?</p>
+
+  <form action="#" method="post">
+    <div class="register">
+      <div class="names">
+        <label for="name" id="firstName">Name</label> <br> <br>
+
+        <label for="firstname" style="color:#ff66cc;">First</label>
+        <input type="text" name="firstname" placeholder="First name" required> <br>
+        <pre>no need for middle name here</pre>
+        <label for="lastname" id="lastName" style="color:#ff66cc;">Last</label>
+        <input type="text" name="lastname" placeholder="Last name" required> <br>
+      </div>
+
+      <div class="emails">
+        <label for="email" id="email">Email</label> <br> <br>
+        <input type="email" name="email" placeholder="real email address only" required> <br>
+        <pre>don't be trippin us here</pre>
+      </div>
+
+      <div class="genders">
+        <label for="gender" id="genderie">Gender</label> <br>
+        <pre>you don't gotta answer if you don't wanna</pre>
+
+        <label for="genderM" style="color:#ff66cc;">Male</label>
+        <input type="radio" name="gender" value="male"> <br> <br>
+
+        <label for="genderF" style="color:#ff66cc;">Female</label>
+        <input type="radio" name="gender" value="female"> <br>
+      </div>
+
+      <div class="ids">
+        <label for="id" id="id">ID</label> <br> <br>
+        <input type="text" name="id" placeholder="English only" required>
+        <pre>
+          gotta be unique
+          no symbols allowed
+        </pre>
+      </div>
+
+      <div class="passwords">
+        <label for="pass" id="pass">PASSWORD</label> <br> <br>
+        <input type="password" name="pass" placeholder="must be at 8~14 characters" min="8" maxlength="14" data-validation="numbers" required> <br>
+        <pre>must be strong enough to defeat Charizard</pre>
+      </div>
+
+      <div class="submitdiv">
+        <pre>now you're cool enough</pre>
+          <input type="submit" name="submit" class="button" value="Done">
+      </div>
+
+
+    </div> <!-- end of the entire div -->
+  </form>
+
+
+
+</body>
+</html>
