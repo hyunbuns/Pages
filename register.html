@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<title>register</title>
+<!-- fonts -->
+<link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Sonsie+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cantarell:700i|Cinzel+Decorative:900|Oswald:700" rel="stylesheet">
+<!-- css -->
+<!-- password check -->
+<link rel="stylesheet" href="passwordcheck.css">
+<style>
+body{
+  font-family: 'Sonsie One', cursive;
+  background-color: black;
+  color: white;
+}
+#reg{
+  text-shadow: 2px 2px 25px #ff4dc4;
+  font-weight:bold;
+  font-size: 150px;
+  opacity: 0.5;
+}
+#genderie, #firstName, #email, #id, #passwordd {
+  text-shadow: 2px 2px 8px #ff6666;
+  font-weight: bold;
+  font-size:25px;
+}
+
+label,input{
+  font-size: 13px;
+}
+.names{
+  position:absolute;
+  top: 50px;
+  left: 120px;
+}
+.genders{
+  position: absolute;
+  top: 300px;
+  left: 400px;
+}
+.emails{
+  position: absolute;
+  top: 500px;
+  left: 700px;
+}
+.ids {
+  position: absolute;
+  top: 50px;
+  right: 400px;
+}
+.passwords{
+  position:absolute;
+  top:300px;
+  right:380px;
+}
+.submitdiv{
+  position:absolute;
+  bottom:100px;
+  left: 150px;
+}
+pre{
+  color: #ffccee;
+}
+.button {
+font-family:'Cantarell', cursive;
+font-weight: bolder;
+display: inline-block;
+padding: 5px 15px;
+font-size: 15px;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+outline: none;
+color: #ffe6e6;
+background-color: #e085c2;
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px #cb3499;
+}
+
+.button:hover {background-color: #e085c2;}
+
+.button:active {
+background-color: #e085c2;
+box-shadow: 0 5px #cb3499;
+transform: translateY(4px);
+}
+#da_rule{
+  font-family: 'Sonsie One';
+  text-shadow: 2px 2px 5px #ff66cc;
+  font-weight: bolder;
+  font-size: 15px;
+}
+#policy{
+  color:#660066;
+  text-decoration: none;
+}
+#cancel {
+font-family:'Cantarell', cursive;
+font-weight: bolder;
+display: inline-block;
+padding: 5px 15px;
+font-size: 15px;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+outline: none;
+color: #ffe6e6;
+background-color: #ff8080;
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px #ff4d4d;
+}
+
+#cancel:hover {background-color: #ff8080;}
+
+#cancel:active{
+  background-color: #ff8080;
+  box-shadow: 0 5px #ff4d4d;
+  transform: translateY(4px);
+}
+
+input[type=text] {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+}
+input[type=text]:focus{
+  box-shadow: 0 0 5px #ff99dd;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+}
+
+</style>
+</head>
+<body>
+  <p style="color:white;" id="reg">Register!!?</p>
+
+  <form action="#" method="post">
+    <div class="register">
+      <div class="names">
+        <label for="name" id="firstName">Name</label> <br> <br>
+
+        <label for="firstname" style="color:#ff66cc;">First</label>
+        <input type="text" name="firstname" placeholder="First name" title="enter your first name" required> <br>
+        <pre>no need for middle name here</pre>
+        <label for="lastname" id="lastName" style="color:#ff66cc;">Last</label>
+        <input type="text" name="lastname" placeholder="Last name" title="enter your last name" required> <br>
+      </div>
+
+      <div class="emails">
+        <label for="email" id="email">Email</label> <br> <br>
+        <input type="email" name="email" placeholder="real email address only" title="enter your email address" required> <br>
+        <pre>don't be trippin us here</pre>
+      </div>
+
+      <div class="genders">
+        <label for="gender" id="genderie">Gender</label> <br><br>
+
+        <label for="gender" style="color:#ff66cc;">Male</label>
+        <input type="radio" name="gender" value="male" title="yes I am a male"> <br> <br>
+
+        <label for="gender" style="color:#ff66cc;">Female</label>
+        <input type="radio" name="gender" value="female" title="yes I am a female"> <br> <br>
+
+        <label for="gender" style="color:#ff66cc;">I'd rather not say</label> <br>
+        <input type="radio" name="gender" value="no" title="I'd rather not">
+
+      </div>
+
+      <div class="ids">
+        <label for="id" id="id">ID</label> <br> <br>
+        <input type="text" name="id" placeholder="Go wild my child" title="enter your id" required >
+        <pre>
+          enter whatever you want
+        </pre>
+      </div>
+
+      <div class="passwords">
+        <label for="pass" id="passwordd">Password</label><br><br>
+      <input type="password" id="pass" name="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="14" placeholder="read the rule below" title="enter your password" required>
+
+      <div id="message">
+        <pre id="da_rule" style="color:#ff66cc;">Password must contain the following :</pre>
+        <pre id="letter" class="invalid">A <b>lowercase </b>letter</pre>
+        <pre id="capital" class="invalid">A <b>capital (uppercase) </b>letter</pre>
+        <pre id="number" class="invalid">A <b>number</b></pre>
+        <pre id="length" class="invalid">Minimum <b> of 8 characters</b></pre>
+        <pre id="length_2" class="invalid">Maximum <b> of 14 characters</b></pre>
+      </div>
+    </div>
+
+      <div class="submitdiv">
+        <pre>by registering to our website, you're agreeing to our <a id="policy" href="policy.html">policy</a></pre>
+          <input type="submit" name="submit" class="button" value="Done">
+      </div>
+      <a href="home.html">
+      <button type="button" id="cancel" name="main">Cancel</button>
+      </a>
+    </div> <!-- end of the entire div -->
+  </form>
+
+  <!-- for the password -->
+    <script>
+    var myInput = document.getElementById("pass");
+    var letter = document.getElementById("letter");
+    var capital = document.getElementById("capital");
+    var number = document.getElementById("number");
+    var length = document.getElementById("length");
+    var length = document.getElementById("length_2");
+
+    // When the user clicks on the password field, show the message box
+    myInput.onfocus = function() {
+      document.getElementById("message").style.display = "block";
+    }
+
+    // When the user clicks outside of the password field, hide the message box
+    myInput.onblur = function() {
+      document.getElementById("message").style.display = "none";
+    }
+
+    // When the user starts to type something inside the password field
+    myInput.onkeyup = function() {
+      // Validate lowercase letters
+      var lowerCaseLetters = /[a-z]/g;
+      if(myInput.value.match(lowerCaseLetters)) {
+        letter.classList.remove("invalid");
+        letter.classList.add("valid");
+      } else {
+        letter.classList.remove("valid");
+        letter.classList.add("invalid");
+    }
+
+      // Validate capital letters
+      var upperCaseLetters = /[A-Z]/g;
+      if(myInput.value.match(upperCaseLetters)) {
+        capital.classList.remove("invalid");
+        capital.classList.add("valid");
+      } else {
+        capital.classList.remove("valid");
+        capital.classList.add("invalid");
+      }
+
+      // Validate numbers
+      var numbers = /[0-9]/g;
+      if(myInput.value.match(numbers)) {
+        number.classList.remove("invalid");
+        number.classList.add("valid");
+      } else {
+        number.classList.remove("valid");
+        number.classList.add("invalid");
+      }
+
+      // Validate length
+      if(myInput.value.length > 8) {
+        length.classList.remove("invalid");
+        length.classList.add("valid");
+      } else {
+        length.classList.remove("valid");
+        length.classList.add("invalid");
+      }
+
+      if(myInput.value.length_2 > 14) {
+        length.classList.remove("invalid");
+        length.classList.add("valid");
+      } else {
+        length.classList.remove("valid");
+        length.classList.add("invalid");
+      }
+    }
+    </script>
+
+
+</body>
+</html>

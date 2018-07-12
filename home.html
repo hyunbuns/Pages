@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>FrattieGirl™</title>
+<link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Sonsie+One" rel="stylesheet">
+<!-- css src -->
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="stars.css">
+<style>
+/* main css */
+body{
+  background-color:black;
+  font-family: 'Sonsie One', cursive;
+}
+#welcome{
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  text-shadow: 2px 2px 15px #ff4dc4;
+  text-weight: bolder;
+  font-size: 25px;
+}
+#welcome, #new{
+  color: white;
+}
+a{
+  text-decoration: none;
+}
+/* end of main css */
+
+/* footer */
+footer {
+    text-align:left;
+    bottom:10px;
+    position: fixed;
+    width: 100%;
+    color: white;
+}
+table{
+  inline: block;
+}
+/* end of footer */
+
+/* image style */
+#purple_girl{
+  position:absolute;
+  left:150px;
+  top:100px;
+  width:300px;
+  height:500px;
+}
+#girl_chest{
+  position:absolute;
+  right:620px;
+  top:100px;
+  width:300px;
+  height:500px;
+}
+#something{
+  position:absolute;
+  right: 150px;
+  top: 100px;
+  width: 300px;
+  height:500px;
+}
+/* end of image style */
+
+/* image hover overlay effect */
+.container {
+  position: absolute;
+  width: 50%;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 50;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* end of image hover overlay effect */
+
+</style>
+</head>
+<body>
+  <!-- logo -->
+  <a id="welcome" href="home.html" title="FrattieGirl™" >FrattieGirl</a> <br> <br>
+  <!-- register button -->
+  <a id="new" href="register.html" style="font-size:13px;" title="click here to register" target="_blank">New here?</a> /
+
+  <!-- images - links that leads the user to 3 main pages of the website-->
+  <!-- image hover overlay effect  -->
+  <div class="container">
+    <img src="images/purple_girl.jpeg" id="purple_girl" alt="purple_girl">
+    <img src="images/girl_chest.jpeg" id="girl_chest" alt="blond_girl">
+    <img src="images/something.gif" id="something" alt="gif">
+    <div class="overlay">
+      <div class="text"></div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- stars -->
+  <div id='stars'></div>
+  <div id='stars2'></div>
+  <div id='stars3'></div>
+
+<footer>
+<table border="0">
+  <tr>
+    <pre id="copyright_text">
+      ㅡFrattieGirl™
+      ⓒCopyright 2018- All rights reserved.
+      by Hyun Ko
+    </pre>
+  </tr>
+</table>
+
+
+</footer>
+
+</body>
+</html>
